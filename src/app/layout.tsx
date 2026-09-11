@@ -38,11 +38,11 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-[#08090d] text-slate-100 antialiased selection:bg-brand-500 selection:text-white">
+      <body className="min-h-screen flex flex-col bg-[#080706] text-[#f5f2eb] font-sans antialiased selection:bg-[#c85a32] selection:text-white">
         <Navbar />
         <main className="flex-1">
           {children}

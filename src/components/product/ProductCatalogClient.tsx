@@ -122,13 +122,13 @@ export function ProductCatalogClient({ initialProducts }: ProductCatalogClientPr
   return (
     <div className="space-y-6">
       {/* Top Header & Sort Controls */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/10">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#EAC996]/15">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-bold text-white">
-            Sexual Wellness Catalogue
+          <h1 className="editorial-title text-3xl sm:text-4xl font-normal text-[#F5F2EB]">
+            Intimacy &amp; Vitality <span className="font-serif italic text-[#EAC996]">Catalogue</span>
           </h1>
-          <p className="text-xs sm:text-sm text-zinc-400 mt-1">
-            Showing <strong className="text-zinc-200">{filteredProducts.length}</strong> certified products with discreet packaging
+          <p className="text-xs sm:text-sm text-[#A8A29E] mt-1 font-light">
+            Showing <strong className="text-[#F5F2EB] font-medium">{filteredProducts.length}</strong> certified products with 100% discreet packaging
           </p>
         </div>
 
@@ -136,19 +136,19 @@ export function ProductCatalogClient({ initialProducts }: ProductCatalogClientPr
           {/* Mobile Filter Toggle */}
           <button
             onClick={() => setMobileFiltersOpen(true)}
-            className="lg:hidden flex items-center gap-2 px-3.5 py-2 rounded-xl bg-dark-850 text-zinc-200 text-xs font-semibold border border-white/10"
+            className="lg:hidden flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#181512] text-[#F5F2EB] text-xs font-semibold border border-[#EAC996]/20"
           >
-            <Filter className="w-4 h-4 text-brand-400" />
+            <Filter className="w-4 h-4 text-[#EAC996]" />
             <span>Filters ({hasActiveFilters ? 'Active' : 'All'})</span>
           </button>
 
           {/* Sort Dropdown */}
           <div className="relative flex items-center">
-            <span className="text-xs text-zinc-400 mr-2 hidden sm:inline">Sort by:</span>
+            <span className="text-xs text-[#A8A29E] mr-2 hidden sm:inline">Sort by:</span>
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="bg-dark-850 text-xs text-zinc-200 border border-white/10 rounded-xl px-3 py-2 focus:outline-none focus:border-brand-500 font-medium cursor-pointer"
+              className="bg-[#181512] text-xs text-[#F5F2EB] border border-[#EAC996]/20 rounded-xl px-3 py-2 focus:outline-none focus:border-[#EAC996]/60 font-medium cursor-pointer"
             >
               <option value="featured">Featured / Best Sellers</option>
               <option value="price_asc">Price: Low to High</option>
@@ -162,16 +162,16 @@ export function ProductCatalogClient({ initialProducts }: ProductCatalogClientPr
       {/* Main Layout Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
         {/* DESKTOP SIDEBAR FILTERS */}
-        <div className="hidden lg:block space-y-6 p-6 rounded-2xl bg-dark-900 border border-white/5 sticky top-28">
-          <div className="flex items-center justify-between pb-4 border-b border-white/5">
-            <span className="text-sm font-bold text-white flex items-center gap-2">
-              <SlidersHorizontal className="w-4 h-4 text-brand-400" />
+        <div className="hidden lg:block space-y-6 p-6 rounded-3xl bg-[#13110E] border border-[#EAC996]/15 sticky top-28 shadow-xl">
+          <div className="flex items-center justify-between pb-4 border-b border-[#302A24]">
+            <span className="text-sm font-semibold text-[#F5F2EB] flex items-center gap-2">
+              <SlidersHorizontal className="w-4 h-4 text-[#EAC996]" />
               Filter Products
             </span>
             {hasActiveFilters && (
               <button
                 onClick={handleResetFilters}
-                className="text-xs text-brand-400 hover:text-brand-300 flex items-center gap-1 font-medium"
+                className="text-xs text-[#EAC996] hover:text-[#FFF0D6] flex items-center gap-1 font-medium transition-colors"
               >
                 <RotateCcw className="w-3 h-3" />
                 <span>Reset</span>
@@ -181,7 +181,7 @@ export function ProductCatalogClient({ initialProducts }: ProductCatalogClientPr
 
           {/* Category Facet */}
           <div className="space-y-2">
-            <label className="text-xs font-semibold text-zinc-300 uppercase tracking-wider block">
+            <label className="editorial-caps text-[#EAC996] block">
               Category
             </label>
             <div className="space-y-1">
@@ -191,8 +191,8 @@ export function ProductCatalogClient({ initialProducts }: ProductCatalogClientPr
                   onClick={() => setSelectedCategory(cat)}
                   className={`w-full text-left text-xs px-2.5 py-1.5 rounded-lg transition-colors flex items-center justify-between ${
                     selectedCategory === cat
-                      ? 'bg-brand-500/20 text-brand-300 font-semibold border border-brand-500/30'
-                      : 'text-zinc-400 hover:text-zinc-200 hover:bg-dark-800'
+                      ? 'bg-[#D96B43]/20 text-[#EAC996] font-semibold border border-[#D96B43]/30'
+                      : 'text-[#A8A29E] hover:text-[#F5F2EB] hover:bg-[#181512]'
                   }`}
                 >
                   <span>{cat === 'all' ? 'All Categories' : cat}</span>
@@ -202,8 +202,8 @@ export function ProductCatalogClient({ initialProducts }: ProductCatalogClientPr
           </div>
 
           {/* Brand Facet */}
-          <div className="space-y-2 pt-3 border-t border-white/5">
-            <label className="text-xs font-semibold text-zinc-300 uppercase tracking-wider block">
+          <div className="space-y-2 pt-3 border-t border-[#302A24]">
+            <label className="editorial-caps text-[#EAC996] block">
               Brand
             </label>
             <div className="space-y-1">
@@ -213,8 +213,8 @@ export function ProductCatalogClient({ initialProducts }: ProductCatalogClientPr
                   onClick={() => setSelectedBrand(b)}
                   className={`w-full text-left text-xs px-2.5 py-1.5 rounded-lg transition-colors flex items-center justify-between ${
                     selectedBrand === b
-                      ? 'bg-brand-500/20 text-brand-300 font-semibold border border-brand-500/30'
-                      : 'text-zinc-400 hover:text-zinc-200 hover:bg-dark-800'
+                      ? 'bg-[#D96B43]/20 text-[#EAC996] font-semibold border border-[#D96B43]/30'
+                      : 'text-[#A8A29E] hover:text-[#F5F2EB] hover:bg-[#181512]'
                   }`}
                 >
                   <span>{b === 'all' ? 'All Brands' : b}</span>
@@ -224,9 +224,9 @@ export function ProductCatalogClient({ initialProducts }: ProductCatalogClientPr
           </div>
 
           {/* Texture / Sensation Facet */}
-          <div className="space-y-2 pt-3 border-t border-white/5">
-            <label className="text-xs font-semibold text-zinc-300 uppercase tracking-wider block">
-              Texture & Feel
+          <div className="space-y-2 pt-3 border-t border-[#302A24]">
+            <label className="editorial-caps text-[#EAC996] block">
+              Texture &amp; Feel
             </label>
             <div className="space-y-1">
               {textures.map((t) => (
@@ -235,8 +235,8 @@ export function ProductCatalogClient({ initialProducts }: ProductCatalogClientPr
                   onClick={() => setSelectedTexture(t)}
                   className={`w-full text-left text-xs px-2.5 py-1.5 rounded-lg transition-colors flex items-center justify-between ${
                     selectedTexture === t
-                      ? 'bg-brand-500/20 text-brand-300 font-semibold border border-brand-500/30'
-                      : 'text-zinc-400 hover:text-zinc-200 hover:bg-dark-800'
+                      ? 'bg-[#D96B43]/20 text-[#EAC996] font-semibold border border-[#D96B43]/30'
+                      : 'text-[#A8A29E] hover:text-[#F5F2EB] hover:bg-[#181512]'
                   }`}
                 >
                   <span>{t === 'all' ? 'All Textures' : t}</span>
@@ -246,8 +246,8 @@ export function ProductCatalogClient({ initialProducts }: ProductCatalogClientPr
           </div>
 
           {/* Price Range */}
-          <div className="space-y-2 pt-3 border-t border-white/5">
-            <label className="text-xs font-semibold text-zinc-300 uppercase tracking-wider block">
+          <div className="space-y-2 pt-3 border-t border-[#302A24]">
+            <label className="editorial-caps text-[#EAC996] block">
               Price (PKR)
             </label>
             <div className="space-y-1 text-xs">
@@ -262,8 +262,8 @@ export function ProductCatalogClient({ initialProducts }: ProductCatalogClientPr
                   onClick={() => setPriceRange(p.id)}
                   className={`w-full text-left px-2.5 py-1.5 rounded-lg transition-colors ${
                     priceRange === p.id
-                      ? 'bg-brand-500/20 text-brand-300 font-semibold border border-brand-500/30'
-                      : 'text-zinc-400 hover:text-zinc-200 hover:bg-dark-800'
+                      ? 'bg-[#D96B43]/20 text-[#EAC996] font-semibold border border-[#D96B43]/30'
+                      : 'text-[#A8A29E] hover:text-[#F5F2EB] hover:bg-[#181512]'
                   }`}
                 >
                   {p.label}
@@ -273,13 +273,13 @@ export function ProductCatalogClient({ initialProducts }: ProductCatalogClientPr
           </div>
 
           {/* In Stock Toggle */}
-          <div className="pt-3 border-t border-white/5 flex items-center justify-between">
-            <span className="text-xs font-medium text-zinc-300">In-Stock Only</span>
+          <div className="pt-3 border-t border-[#302A24] flex items-center justify-between">
+            <span className="text-xs font-medium text-[#F5F2EB]">In-Stock Only</span>
             <input
               type="checkbox"
               checked={inStockOnly}
               onChange={(e) => setInStockOnly(e.target.checked)}
-              className="w-4 h-4 rounded text-brand-500 focus:ring-brand-400 bg-dark-800 border-white/10 cursor-pointer"
+              className="w-4 h-4 rounded text-[#D96B43] focus:ring-[#EAC996] bg-[#181512] border-[#EAC996]/20 cursor-pointer"
             />
           </div>
         </div>
@@ -289,50 +289,50 @@ export function ProductCatalogClient({ initialProducts }: ProductCatalogClientPr
           {/* Active Filter Chips */}
           {hasActiveFilters && (
             <div className="flex flex-wrap items-center gap-2">
-              <span className="text-xs text-zinc-500">Active filters:</span>
+              <span className="text-xs text-[#8A8275]">Active filters:</span>
               {selectedCategory !== 'all' && (
-                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-dark-800 text-xs text-zinc-200 border border-white/10">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#181512] text-xs text-[#F5F2EB] border border-[#EAC996]/20">
                   {selectedCategory}
                   <button onClick={() => setSelectedCategory('all')}>
-                    <X className="w-3 h-3 text-zinc-400 hover:text-white" />
+                    <X className="w-3 h-3 text-[#A8A29E] hover:text-white" />
                   </button>
                 </span>
               )}
               {selectedBrand !== 'all' && (
-                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-dark-800 text-xs text-zinc-200 border border-white/10">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#181512] text-xs text-[#F5F2EB] border border-[#EAC996]/20">
                   Brand: {selectedBrand}
                   <button onClick={() => setSelectedBrand('all')}>
-                    <X className="w-3 h-3 text-zinc-400 hover:text-white" />
+                    <X className="w-3 h-3 text-[#A8A29E] hover:text-white" />
                   </button>
                 </span>
               )}
               {selectedTexture !== 'all' && (
-                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-dark-800 text-xs text-zinc-200 border border-white/10">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#181512] text-xs text-[#F5F2EB] border border-[#EAC996]/20">
                   {selectedTexture}
                   <button onClick={() => setSelectedTexture('all')}>
-                    <X className="w-3 h-3 text-zinc-400 hover:text-white" />
+                    <X className="w-3 h-3 text-[#A8A29E] hover:text-white" />
                   </button>
                 </span>
               )}
               {priceRange !== 'all' && (
-                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-dark-800 text-xs text-zinc-200 border border-white/10">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#181512] text-xs text-[#F5F2EB] border border-[#EAC996]/20">
                   Price: {priceRange}
                   <button onClick={() => setPriceRange('all')}>
-                    <X className="w-3 h-3 text-zinc-400 hover:text-white" />
+                    <X className="w-3 h-3 text-[#A8A29E] hover:text-white" />
                   </button>
                 </span>
               )}
               {searchQuery && (
-                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-dark-800 text-xs text-zinc-200 border border-white/10">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#181512] text-xs text-[#F5F2EB] border border-[#EAC996]/20">
                   Search: &quot;{searchQuery}&quot;
                   <button onClick={() => setSearchQuery('')}>
-                    <X className="w-3 h-3 text-zinc-400 hover:text-white" />
+                    <X className="w-3 h-3 text-[#A8A29E] hover:text-white" />
                   </button>
                 </span>
               )}
               <button
                 onClick={handleResetFilters}
-                className="text-xs text-brand-400 hover:underline ml-1"
+                className="text-xs text-[#EAC996] hover:text-[#FFF0D6] underline ml-1"
               >
                 Clear all
               </button>
@@ -341,19 +341,19 @@ export function ProductCatalogClient({ initialProducts }: ProductCatalogClientPr
 
           {/* Product Items */}
           {filteredProducts.length === 0 ? (
-            <div className="py-16 text-center rounded-2xl bg-dark-900 border border-white/5 space-y-4">
-              <div className="w-12 h-12 rounded-xl bg-dark-800 mx-auto flex items-center justify-center text-zinc-500">
-                <Search className="w-6 h-6" />
+            <div className="py-16 text-center rounded-3xl bg-[#13110E] border border-[#EAC996]/15 space-y-4">
+              <div className="w-12 h-12 rounded-xl bg-[#181512] mx-auto flex items-center justify-center text-[#8A8275]">
+                <Search className="w-6 h-6 text-[#EAC996]" />
               </div>
               <div>
-                <h3 className="text-base font-bold text-zinc-200">No matching products found</h3>
-                <p className="text-xs text-zinc-400 mt-1 max-w-sm mx-auto">
+                <h3 className="text-base font-semibold text-[#F5F2EB]">No matching products found</h3>
+                <p className="text-xs text-[#A8A29E] mt-1 max-w-sm mx-auto font-light">
                   Try clearing some filters or searching for terms like &quot;Durex&quot;, &quot;Ultra Thin&quot;, or &quot;Delay&quot;.
                 </p>
               </div>
               <button
                 onClick={handleResetFilters}
-                className="px-4 py-2 rounded-xl bg-dark-800 hover:bg-dark-700 text-xs font-semibold text-zinc-200 border border-white/10"
+                className="px-4 py-2 rounded-xl bg-[#181512] hover:bg-[#221E1A] text-xs font-semibold text-[#F5F2EB] border border-[#EAC996]/20 transition-colors"
               >
                 Reset All Filters
               </button>

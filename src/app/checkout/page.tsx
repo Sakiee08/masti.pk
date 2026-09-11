@@ -162,16 +162,16 @@ export default function CheckoutPage() {
       <div className="mb-8">
         <Link
           href="/cart"
-          className="inline-flex items-center gap-2 text-xs text-zinc-400 hover:text-white transition-colors"
+          className="inline-flex items-center gap-2 text-xs text-zinc-400 hover:text-champagne-300 transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Return to Cart</span>
         </Link>
-        <h1 className="text-2xl sm:text-3xl font-extrabold text-white mt-2">
+        <h1 className="font-serif text-3xl sm:text-4xl font-normal text-white mt-2 tracking-tight">
           Confidential Checkout
         </h1>
-        <p className="text-xs text-zinc-400 mt-1">
-          Zero-disclosure packaging guaranteed • Cash on Delivery or Card
+        <p className="text-xs text-champagne-400/80 mt-1 font-light">
+          Zero-disclosure packaging guaranteed • Cash on Delivery or Secure Card
         </p>
       </div>
 
@@ -188,9 +188,9 @@ export default function CheckoutPage() {
             )}
 
             {/* 1. Customer Details */}
-            <div className="p-6 sm:p-8 rounded-3xl bg-dark-900 border border-white/5 space-y-4">
-              <h2 className="text-base font-bold text-white flex items-center gap-2">
-                <span className="w-6 h-6 rounded-full bg-brand-500/20 text-brand-400 text-xs flex items-center justify-center font-bold">
+            <div className="p-6 sm:p-8 rounded-3xl bg-[#110F0D] border border-champagne-500/15 shadow-candle-glow space-y-4">
+              <h2 className="text-base font-serif font-normal text-white flex items-center gap-2.5">
+                <span className="w-6 h-6 rounded-full bg-brand-500/20 text-champagne-400 text-xs flex items-center justify-center font-bold border border-brand-500/30">
                   1
                 </span>
                 Recipient Information
@@ -207,7 +207,7 @@ export default function CheckoutPage() {
                     placeholder="e.g. Muhammad Ali"
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
-                    className="w-full bg-dark-850 text-xs text-white rounded-xl px-3.5 py-2.5 border border-white/10 focus:outline-none focus:border-brand-500"
+                    className="w-full bg-[#141210] text-xs text-white rounded-xl px-3.5 py-2.5 border border-champagne-500/20 focus:outline-none focus:border-champagne-400"
                   />
                 </div>
 
@@ -221,7 +221,7 @@ export default function CheckoutPage() {
                     placeholder="0300 1234567"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="w-full bg-dark-850 text-xs text-white rounded-xl px-3.5 py-2.5 border border-white/10 focus:outline-none focus:border-brand-500"
+                    className="w-full bg-[#141210] text-xs text-white rounded-xl px-3.5 py-2.5 border border-champagne-500/20 focus:outline-none focus:border-champagne-400"
                   />
                   <span className="text-[10px] text-zinc-500">
                     Courier rider will call this number prior to delivery
@@ -237,16 +237,16 @@ export default function CheckoutPage() {
                     placeholder="ali@example.com (for order tracking confirmation)"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full bg-dark-850 text-xs text-white rounded-xl px-3.5 py-2.5 border border-white/10 focus:outline-none focus:border-brand-500"
+                    className="w-full bg-[#141210] text-xs text-white rounded-xl px-3.5 py-2.5 border border-champagne-500/20 focus:outline-none focus:border-champagne-400"
                   />
                 </div>
               </div>
             </div>
 
             {/* 2. Delivery Address */}
-            <div className="p-6 sm:p-8 rounded-3xl bg-dark-900 border border-white/5 space-y-4">
-              <h2 className="text-base font-bold text-white flex items-center gap-2">
-                <span className="w-6 h-6 rounded-full bg-brand-500/20 text-brand-400 text-xs flex items-center justify-center font-bold">
+            <div className="p-6 sm:p-8 rounded-3xl bg-[#110F0D] border border-champagne-500/15 shadow-candle-glow space-y-4">
+              <h2 className="text-base font-serif font-normal text-white flex items-center gap-2.5">
+                <span className="w-6 h-6 rounded-full bg-brand-500/20 text-champagne-400 text-xs flex items-center justify-center font-bold border border-brand-500/30">
                   2
                 </span>
                 Shipping Address in Pakistan
@@ -260,7 +260,7 @@ export default function CheckoutPage() {
                   <select
                     value={city}
                     onChange={(e) => setCity(e.target.value)}
-                    className="w-full bg-dark-850 text-xs text-white rounded-xl px-3.5 py-2.5 border border-white/10 focus:outline-none focus:border-brand-500 cursor-pointer"
+                    className="w-full bg-[#141210] text-xs text-white rounded-xl px-3.5 py-2.5 border border-champagne-500/20 focus:outline-none focus:border-champagne-400 cursor-pointer"
                   >
                     {cities.map((c) => (
                       <option key={c} value={c}>
@@ -280,7 +280,7 @@ export default function CheckoutPage() {
                     placeholder="e.g. DHA Phase 5, Gulberg, Clifton, F-7"
                     value={area}
                     onChange={(e) => setArea(e.target.value)}
-                    className="w-full bg-dark-850 text-xs text-white rounded-xl px-3.5 py-2.5 border border-white/10 focus:outline-none focus:border-brand-500"
+                    className="w-full bg-[#141210] text-xs text-white rounded-xl px-3.5 py-2.5 border border-champagne-500/20 focus:outline-none focus:border-champagne-400"
                   />
                 </div>
 
@@ -294,7 +294,7 @@ export default function CheckoutPage() {
                     placeholder="House #, Street #, Building Name or Landmark"
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
-                    className="w-full bg-dark-850 text-xs text-white rounded-xl px-3.5 py-2.5 border border-white/10 focus:outline-none focus:border-brand-500"
+                    className="w-full bg-[#141210] text-xs text-white rounded-xl px-3.5 py-2.5 border border-champagne-500/20 focus:outline-none focus:border-champagne-400"
                   />
                 </div>
 
@@ -307,16 +307,16 @@ export default function CheckoutPage() {
                     placeholder="e.g. Call when outside, leave at gate with guard, do not ring bell"
                     value={deliveryNotes}
                     onChange={(e) => setDeliveryNotes(e.target.value)}
-                    className="w-full bg-dark-850 text-xs text-white rounded-xl px-3.5 py-2.5 border border-white/10 focus:outline-none focus:border-brand-500"
+                    className="w-full bg-[#141210] text-xs text-white rounded-xl px-3.5 py-2.5 border border-champagne-500/20 focus:outline-none focus:border-champagne-400"
                   />
                 </div>
               </div>
             </div>
 
             {/* 3. Shipping Speed */}
-            <div className="p-6 sm:p-8 rounded-3xl bg-dark-900 border border-white/5 space-y-4">
-              <h2 className="text-base font-bold text-white flex items-center gap-2">
-                <span className="w-6 h-6 rounded-full bg-brand-500/20 text-brand-400 text-xs flex items-center justify-center font-bold">
+            <div className="p-6 sm:p-8 rounded-3xl bg-[#110F0D] border border-champagne-500/15 shadow-candle-glow space-y-4">
+              <h2 className="text-base font-serif font-normal text-white flex items-center gap-2.5">
+                <span className="w-6 h-6 rounded-full bg-brand-500/20 text-champagne-400 text-xs flex items-center justify-center font-bold border border-brand-500/30">
                   3
                 </span>
                 Shipping Speed
@@ -328,17 +328,17 @@ export default function CheckoutPage() {
                   className={cn(
                     'p-4 rounded-2xl border cursor-pointer transition-all flex items-start justify-between gap-3',
                     shippingMethod === 'standard'
-                      ? 'bg-brand-500/10 border-brand-500 text-white'
-                      : 'bg-dark-850 border-white/10 text-zinc-400 hover:border-white/20'
+                      ? 'bg-brand-500/15 border-champagne-400 text-white shadow-candle-glow'
+                      : 'bg-[#141210] border-champagne-500/15 text-zinc-400 hover:border-champagne-500/30'
                   )}
                 >
                   <div className="space-y-1">
-                    <span className="text-xs font-bold text-white block">Standard Courier</span>
-                    <span className="text-[11px] text-zinc-400 block">
+                    <span className="text-xs font-medium text-white block">Standard Courier</span>
+                    <span className="text-[11px] text-zinc-400 block font-light">
                       24–48 hrs in major cities; 2–3 days nationwide
                     </span>
                   </div>
-                  <span className="text-xs font-bold text-zinc-200">
+                  <span className="text-xs font-semibold text-zinc-200">
                     {baseShippingMinor === 0 ? 'FREE' : formatPKR(baseShippingMinor)}
                   </span>
                 </label>
@@ -348,17 +348,17 @@ export default function CheckoutPage() {
                   className={cn(
                     'p-4 rounded-2xl border cursor-pointer transition-all flex items-start justify-between gap-3',
                     shippingMethod === 'express'
-                      ? 'bg-brand-500/10 border-brand-500 text-white'
-                      : 'bg-dark-850 border-white/10 text-zinc-400 hover:border-white/20'
+                      ? 'bg-brand-500/15 border-champagne-400 text-white shadow-candle-glow'
+                      : 'bg-[#141210] border-champagne-500/15 text-zinc-400 hover:border-champagne-500/30'
                   )}
                 >
                   <div className="space-y-1">
-                    <span className="text-xs font-bold text-white block">Express Priority Dispatch</span>
-                    <span className="text-[11px] text-zinc-400 block">
+                    <span className="text-xs font-medium text-white block">Express Priority Dispatch</span>
+                    <span className="text-[11px] text-zinc-400 block font-light">
                       Same-day dispatch with priority rider routing
                     </span>
                   </div>
-                  <span className="text-xs font-bold text-brand-400">
+                  <span className="text-xs font-semibold text-champagne-400">
                     +Rs. 200
                   </span>
                 </label>
@@ -366,9 +366,9 @@ export default function CheckoutPage() {
             </div>
 
             {/* 4. Payment Method */}
-            <div className="p-6 sm:p-8 rounded-3xl bg-dark-900 border border-white/5 space-y-4">
-              <h2 className="text-base font-bold text-white flex items-center gap-2">
-                <span className="w-6 h-6 rounded-full bg-brand-500/20 text-brand-400 text-xs flex items-center justify-center font-bold">
+            <div className="p-6 sm:p-8 rounded-3xl bg-[#110F0D] border border-champagne-500/15 shadow-candle-glow space-y-4">
+              <h2 className="text-base font-serif font-normal text-white flex items-center gap-2.5">
+                <span className="w-6 h-6 rounded-full bg-brand-500/20 text-champagne-400 text-xs flex items-center justify-center font-bold border border-brand-500/30">
                   4
                 </span>
                 Payment Method
@@ -381,20 +381,20 @@ export default function CheckoutPage() {
                   className={cn(
                     'p-4 rounded-2xl border cursor-pointer transition-all space-y-2',
                     paymentMethod === 'cod'
-                      ? 'bg-emerald-500/10 border-emerald-500 text-white shadow-glow-emerald/20'
-                      : 'bg-dark-850 border-white/10 text-zinc-400 hover:border-white/20'
+                      ? 'bg-emerald-950/40 border-emerald-500/50 text-white shadow-candle-glow'
+                      : 'bg-[#141210] border-champagne-500/15 text-zinc-400 hover:border-champagne-500/30'
                   )}
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <Banknote className="w-5 h-5 text-emerald-400" />
-                      <span className="text-xs font-bold text-white">Cash on Delivery (COD)</span>
+                      <span className="text-xs font-medium text-white">Cash on Delivery (COD)</span>
                     </div>
                     {paymentMethod === 'cod' && (
                       <CheckCircle2 className="w-4 h-4 text-emerald-400" />
                     )}
                   </div>
-                  <p className="text-[11px] text-zinc-400 leading-relaxed">
+                  <p className="text-[11px] text-zinc-400 font-light leading-relaxed">
                     Pay with cash to the courier rider upon receiving your package. Most popular in Pakistan.
                   </p>
                 </div>
@@ -405,20 +405,20 @@ export default function CheckoutPage() {
                   className={cn(
                     'p-4 rounded-2xl border cursor-pointer transition-all space-y-2',
                     paymentMethod === 'card'
-                      ? 'bg-brand-500/10 border-brand-500 text-white shadow-glow-brand/20'
-                      : 'bg-dark-850 border-white/10 text-zinc-400 hover:border-white/20'
+                      ? 'bg-brand-500/15 border-champagne-400 text-white shadow-candle-glow'
+                      : 'bg-[#141210] border-champagne-500/15 text-zinc-400 hover:border-champagne-500/30'
                   )}
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <CreditCard className="w-5 h-5 text-brand-400" />
-                      <span className="text-xs font-bold text-white">Debit / Credit Card</span>
+                      <CreditCard className="w-5 h-5 text-champagne-400" />
+                      <span className="text-xs font-medium text-white">Debit / Credit Card</span>
                     </div>
                     {paymentMethod === 'card' && (
-                      <CheckCircle2 className="w-4 h-4 text-brand-400" />
+                      <CheckCircle2 className="w-4 h-4 text-champagne-400" />
                     )}
                   </div>
-                  <p className="text-[11px] text-zinc-400 leading-relaxed">
+                  <p className="text-[11px] text-zinc-400 font-light leading-relaxed">
                     Pay securely online via Stripe. Visa, Mastercard, and UnionPay supported.
                   </p>
                 </div>
@@ -426,9 +426,9 @@ export default function CheckoutPage() {
 
               {/* Card input mock form if card selected */}
               {paymentMethod === 'card' && (
-                <div className="p-5 rounded-2xl bg-dark-850 border border-white/10 space-y-3 pt-4">
+                <div className="p-5 rounded-2xl bg-[#141210] border border-champagne-500/20 space-y-3 pt-4">
                   <div className="flex items-center justify-between text-xs text-zinc-400 pb-1">
-                    <span className="font-semibold text-white flex items-center gap-1.5">
+                    <span className="font-medium text-white flex items-center gap-1.5">
                       <Lock className="w-3.5 h-3.5 text-emerald-400" />
                       256-Bit SSL Encrypted Card Payment
                     </span>
@@ -442,7 +442,7 @@ export default function CheckoutPage() {
                       placeholder="4242 •••• •••• 4242"
                       value={cardNumber}
                       onChange={(e) => setCardNumber(e.target.value)}
-                      className="w-full bg-dark-900 text-xs text-white rounded-xl px-3 py-2 border border-white/10 focus:outline-none focus:border-brand-500 font-mono"
+                      className="w-full bg-[#181512] text-xs text-white rounded-xl px-3 py-2 border border-champagne-500/20 focus:outline-none focus:border-champagne-400 font-mono"
                     />
                   </div>
 
@@ -454,7 +454,7 @@ export default function CheckoutPage() {
                         placeholder="12/28"
                         value={cardExpiry}
                         onChange={(e) => setCardExpiry(e.target.value)}
-                        className="w-full bg-dark-900 text-xs text-white rounded-xl px-3 py-2 border border-white/10 focus:outline-none focus:border-brand-500 font-mono"
+                        className="w-full bg-[#181512] text-xs text-white rounded-xl px-3 py-2 border border-champagne-500/20 focus:outline-none focus:border-champagne-400 font-mono"
                       />
                     </div>
                     <div className="space-y-1.5">
@@ -464,7 +464,7 @@ export default function CheckoutPage() {
                         placeholder="123"
                         value={cardCvc}
                         onChange={(e) => setCardCvc(e.target.value)}
-                        className="w-full bg-dark-900 text-xs text-white rounded-xl px-3 py-2 border border-white/10 focus:outline-none focus:border-brand-500 font-mono"
+                        className="w-full bg-[#181512] text-xs text-white rounded-xl px-3 py-2 border border-champagne-500/20 focus:outline-none focus:border-champagne-400 font-mono"
                       />
                     </div>
                   </div>
@@ -473,16 +473,16 @@ export default function CheckoutPage() {
             </div>
 
             {/* 5. Discreet Packaging Guarantee Checkbox */}
-            <div className="p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-start gap-3">
+            <div className="p-4 rounded-2xl bg-emerald-950/30 border border-emerald-500/20 flex items-start gap-3">
               <input
                 type="checkbox"
                 id="discreetCheckbox"
                 checked={discreetPackagingChecked}
                 onChange={(e) => setDiscreetPackagingChecked(e.target.checked)}
-                className="w-4 h-4 rounded text-emerald-500 focus:ring-emerald-400 bg-dark-800 border-white/10 cursor-pointer mt-0.5"
+                className="w-4 h-4 rounded text-emerald-500 focus:ring-emerald-400 bg-[#141210] border-champagne-500/20 cursor-pointer mt-0.5"
               />
-              <label htmlFor="discreetCheckbox" className="text-xs text-zinc-300 leading-relaxed cursor-pointer">
-                <strong className="text-emerald-400 font-bold block mb-0.5">
+              <label htmlFor="discreetCheckbox" className="text-xs text-zinc-300 leading-relaxed cursor-pointer font-light">
+                <strong className="text-emerald-400 font-medium block mb-0.5">
                   100% Discreet Packaging Guarantee
                 </strong>
                 Ship in a plain, unmarked box with zero product names or logos. The sender name will appear as &quot;Logistics Hub&quot;.
@@ -491,29 +491,29 @@ export default function CheckoutPage() {
           </div>
 
           {/* Right Column: Order Review & Confirm CTA */}
-          <div className="p-6 rounded-3xl bg-dark-900 border border-white/10 space-y-6 sticky top-28">
-            <h2 className="text-base font-bold text-white">Review Your Items</h2>
+          <div className="p-6 sm:p-8 rounded-3xl bg-[#110F0D] border border-champagne-500/20 shadow-candle-glow space-y-6 sticky top-28">
+            <h2 className="text-base font-serif font-normal text-white">Review Your Items</h2>
 
             <div className="space-y-3 max-h-64 overflow-y-auto pr-1">
               {items.map((item) => (
                 <div key={item.variantId} className="flex items-center gap-3 text-xs">
-                  <div className="w-12 h-12 rounded-lg bg-dark-800 overflow-hidden flex-shrink-0 border border-white/5">
+                  <div className="w-12 h-12 rounded-xl bg-[#141210] overflow-hidden flex-shrink-0 border border-champagne-500/15 p-1 flex items-center justify-center">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={item.imageUrl}
                       alt={item.productTitle}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <span className="font-semibold text-zinc-100 block truncate">
+                    <span className="font-medium text-zinc-100 block truncate">
                       {item.productTitle}
                     </span>
-                    <span className="text-[11px] text-zinc-400 block">
+                    <span className="text-[11px] text-zinc-400 block font-light">
                       {item.variantTitle} × {item.quantity}
                     </span>
                   </div>
-                  <span className="font-bold text-zinc-200">
+                  <span className="font-semibold text-champagne-300">
                     {formatPKR(item.unitPriceInMinorUnits * item.quantity)}
                   </span>
                 </div>
@@ -521,10 +521,10 @@ export default function CheckoutPage() {
             </div>
 
             {/* Calculations */}
-            <div className="space-y-2 text-xs text-zinc-400 pt-4 border-t border-white/5">
+            <div className="space-y-2.5 text-xs text-zinc-400 pt-4 border-t border-champagne-500/15">
               <div className="flex justify-between">
                 <span>Subtotal</span>
-                <span className="text-zinc-200 font-semibold">{formatPKR(subtotalMinor)}</span>
+                <span className="text-zinc-200 font-medium">{formatPKR(subtotalMinor)}</span>
               </div>
               {discountMinor > 0 && (
                 <div className="flex justify-between text-emerald-400">
@@ -534,7 +534,7 @@ export default function CheckoutPage() {
               )}
               <div className="flex justify-between">
                 <span>Shipping ({shippingMethod === 'express' ? 'Express' : 'Standard'})</span>
-                <span className="text-zinc-200 font-semibold">
+                <span className="text-zinc-200 font-medium">
                   {finalShippingMinor === 0 ? (
                     <span className="text-emerald-400 font-bold">FREE</span>
                   ) : (
@@ -542,9 +542,9 @@ export default function CheckoutPage() {
                   )}
                 </span>
               </div>
-              <div className="flex justify-between pt-3 border-t border-white/10 text-base font-extrabold text-white">
+              <div className="flex justify-between pt-3.5 border-t border-champagne-500/15 text-base font-serif font-normal text-white">
                 <span>Payable Amount</span>
-                <span className="text-brand-400 text-lg">{formatPKR(finalTotalMinor)}</span>
+                <span className="text-champagne-400 text-xl font-sans font-bold">{formatPKR(finalTotalMinor)}</span>
               </div>
             </div>
 
@@ -552,7 +552,7 @@ export default function CheckoutPage() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full py-4 rounded-2xl bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 disabled:opacity-50 text-white font-extrabold text-sm shadow-glow-brand flex items-center justify-center gap-2 transition-all hover:scale-[1.01]"
+              className="w-full py-4 rounded-2xl bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 disabled:opacity-50 text-white font-medium text-sm shadow-glow-brand flex items-center justify-center gap-2 transition-all hover:scale-[1.01] tracking-wide"
             >
               {isSubmitting ? (
                 <span>Confirming Order...</span>
@@ -563,7 +563,7 @@ export default function CheckoutPage() {
               )}
             </button>
 
-            <p className="text-[11px] text-center text-zinc-500">
+            <p className="text-[11px] text-center text-zinc-500 font-light">
               By confirming, you acknowledge that your parcel will be delivered in unbranded packaging.
             </p>
           </div>

@@ -3,63 +3,142 @@
 @tailwind utilities;
 
 :root {
-  --background: #090a0f;
-  --foreground: #f8fafc;
+  --background: #080706;
+  --foreground: #F5F2EB;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: var(--font-sans);
   overflow-x: hidden;
+  letter-spacing: -0.01em;
 }
 
-/* Custom glassmorphism utilities */
+/* Typography Editorial Utilities */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.editorial-title {
+  font-family: var(--font-serif);
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+}
+
+.editorial-italic {
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+.editorial-caps {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+/* Luxury Gradient Texts */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF2DC 0%, #EAC996 45%, #D4AF37 75%, #B58E22 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-gradient-text,
+.velvet-gradient-text {
+  background: linear-gradient(135deg, #FDE6DE 0%, #E88A6E 30%, #D96B43 65%, #C85A32 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.emerald-gradient-text {
+  background: linear-gradient(135deg, #D1FAE5 0%, #34D399 50%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* International D2C Luxury Glassmorphism */
 .glass-panel {
-  background: rgba(18, 20, 29, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(18, 15, 13, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(234, 201, 150, 0.12);
 }
 
 .glass-panel-hover {
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-panel-hover:hover {
-  background: rgba(24, 27, 39, 0.88);
-  border-color: rgba(244, 63, 94, 0.35);
+  background: rgba(24, 20, 17, 0.92);
+  border-color: rgba(217, 107, 67, 0.35);
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px -10px rgba(244, 63, 94, 0.15);
+  box-shadow: 0 16px 36px -10px rgba(217, 107, 67, 0.18);
 }
 
-.gold-gradient-text {
-  background: linear-gradient(135deg, #fcd34d 0%, #f59e0b 50%, #d97706 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.glass-luxury {
+  background: rgba(17, 15, 13, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(234, 201, 150, 0.14);
+  box-shadow: 0 24px 48px -15px rgba(0, 0, 0, 0.8);
 }
 
-.brand-gradient-text {
-  background: linear-gradient(135deg, #fda4af 0%, #f43f5e 50%, #be123c 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.gilded-border {
+  border: 1px solid rgba(234, 201, 150, 0.15);
 }
 
-/* Custom sleek scrollbars */
+.gilded-border-subtle {
+  border: 1px solid rgba(255, 245, 235, 0.08);
+}
+
+/* Ambient Candlelight Halos */
+.ambient-glow {
+  background: radial-gradient(circle at center, rgba(217, 107, 67, 0.15) 0%, rgba(212, 175, 55, 0.06) 50%, transparent 75%);
+}
+
+.candle-card {
+  position: relative;
+}
+
+.candle-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at 50% 25%, rgba(234, 201, 150, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+  opacity: 0.8;
+  transition: opacity 0.4s ease;
+}
+
+.candle-card:hover::before {
+  opacity: 1;
+}
+
+/* Custom Sleek Obsidian/Champagne Scrollbars */
 ::-webkit-scrollbar {
   width: 7px;
   height: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #090a0f;
+  background: #080706;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #232736;
+  background: #24201D;
   border-radius: 9999px;
+  border: 1px solid rgba(234, 201, 150, 0.08);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #f43f5e;
+  background: #D96B43;
 }

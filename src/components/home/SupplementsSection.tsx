@@ -70,29 +70,29 @@ export function SupplementsSection() {
   }).slice(0, 4);
 
   return (
-    <section className="rounded-3xl bg-gradient-to-b from-dark-900/90 to-dark-950 border border-white/10 p-6 sm:p-10 space-y-8 relative overflow-hidden shadow-2xl">
+    <section className="rounded-3xl bg-gradient-to-b from-[#141210] via-[#100E0C] to-[#0A0908] border border-[#EAC996]/20 p-6 sm:p-10 space-y-8 relative overflow-hidden shadow-2xl">
       {/* Subtle background glow */}
-      <div className="absolute -top-24 right-10 w-96 h-96 bg-brand-600/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -top-24 right-10 w-96 h-96 bg-[#D96B43]/10 rounded-full blur-3xl pointer-events-none" />
 
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div className="space-y-2">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold border border-emerald-500/20">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#D4AF37]/10 text-[#EAC996] text-xs font-semibold border border-[#D4AF37]/25">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Clinical Nutrition & Longevity</span>
+            <span>Clinical Nutrition &amp; Longevity</span>
           </div>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Targeted Health & Vitality Supplements
+          <h2 className="editorial-title text-2xl sm:text-4xl font-normal text-[#F5F2EB] tracking-tight">
+            Targeted Health &amp; <span className="font-serif italic text-[#EAC996]">Vitality Supplements</span>
           </h2>
-          <p className="text-xs sm:text-sm text-zinc-400 max-w-2xl leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#A8A29E] max-w-2xl leading-relaxed font-light">
             Sourced directly from certified pharmaceutical laboratories and distributors in Pakistan: 
-            <strong className="text-zinc-200"> Nutrifactor</strong>, <strong className="text-zinc-200">Vitabiotics</strong>, <strong className="text-zinc-200">Qarshi</strong>, <strong className="text-zinc-200">Nature&apos;s Bounty</strong> & <strong className="text-zinc-200">Seven Seas</strong>.
+            <strong className="text-[#F5F2EB] font-medium"> Nutrifactor</strong>, <strong className="text-[#F5F2EB] font-medium">Vitabiotics</strong>, <strong className="text-[#F5F2EB] font-medium">Qarshi</strong>, <strong className="text-[#F5F2EB] font-medium">Nature&apos;s Bounty</strong> &amp; <strong className="text-[#F5F2EB] font-medium">Seven Seas</strong>.
           </p>
         </div>
 
         <Link
           href={`/products?category=${encodeURIComponent(currentTargetMeta.category)}`}
-          className="text-xs font-bold text-zinc-300 hover:text-brand-400 flex items-center gap-1.5 transition-colors group flex-shrink-0"
+          className="text-xs font-bold text-[#EAC996] hover:text-[#FFF0D6] flex items-center gap-1.5 transition-colors group flex-shrink-0"
         >
           <span>View All in {currentTargetMeta.label}</span>
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -108,34 +108,34 @@ export function SupplementsSection() {
             <button
               key={t.id}
               onClick={() => setActiveTarget(t.id)}
-              className={`p-4 rounded-2xl border text-left transition-all duration-200 flex flex-col justify-between space-y-3 ${
+              className={`p-4 rounded-2xl border text-left transition-all duration-300 flex flex-col justify-between space-y-3 ${
                 isActive
-                  ? `bg-gradient-to-br ${t.accent} shadow-lg scale-[1.01] border-white/25`
-                  : 'bg-dark-850/60 border-white/5 text-zinc-400 hover:border-white/15 hover:bg-dark-800'
+                  ? 'bg-[#1C1814] border-[#EAC996]/40 text-[#F5F2EB] shadow-[0_8px_25px_-5px_rgba(217,107,67,0.25)] scale-[1.01]'
+                  : 'bg-[#13110E] border-[#EAC996]/10 text-[#A8A29E] hover:border-[#EAC996]/25 hover:bg-[#181512]'
               }`}
             >
               <div className="flex items-center justify-between">
                 <div
                   className={`w-9 h-9 rounded-xl flex items-center justify-center ${
-                    isActive ? 'bg-white/15 text-white' : 'bg-dark-800 text-zinc-400'
+                    isActive ? 'bg-[#D96B43]/20 text-[#E88A6E] border border-[#D96B43]/30' : 'bg-[#181512] text-[#8A8275]'
                   }`}
                 >
                   <Icon className="w-4 h-4" />
                 </div>
                 {isActive && (
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="w-2 h-2 rounded-full bg-[#34D399] shadow-[0_0_8px_rgba(52,211,153,0.8)]" />
                 )}
               </div>
 
               <div>
                 <span
-                  className={`text-xs sm:text-sm font-bold block ${
-                    isActive ? 'text-white' : 'text-zinc-200'
+                  className={`text-xs sm:text-sm font-semibold block ${
+                    isActive ? 'text-[#F5F2EB]' : 'text-[#D5CEBA]'
                   }`}
                 >
                   {t.label}
                 </span>
-                <span className="text-[11px] text-zinc-400 block mt-0.5">
+                <span className="text-[11px] text-[#8A8275] block mt-0.5 font-light">
                   {t.sublabel}
                 </span>
               </div>
@@ -145,18 +145,18 @@ export function SupplementsSection() {
       </div>
 
       {/* Target Highlight Banner */}
-      <div className="p-4 sm:p-5 rounded-2xl bg-dark-850/70 border border-white/5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+      <div className="p-4 sm:p-5 rounded-2xl bg-[#161311] border border-[#EAC996]/15 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
         <div className="space-y-1">
-          <span className="text-zinc-300 font-semibold block">
+          <span className="text-[#D5CEBA] font-normal block leading-relaxed">
             {currentTargetMeta.description}
           </span>
-          <span className="text-[11px] text-zinc-500 block">
-            Featured Pakistani Brands: <span className="text-brand-400 font-medium">{currentTargetMeta.brands}</span>
+          <span className="text-[11px] text-[#8A8275] block">
+            Featured Pakistani Brands: <span className="text-[#EAC996] font-medium">{currentTargetMeta.brands}</span>
           </span>
         </div>
-        <div className="flex items-center gap-2 flex-shrink-0 text-[11px] text-emerald-400 font-medium">
+        <div className="flex items-center gap-2 flex-shrink-0 text-[11px] text-[#34D399] font-medium">
           <ShieldCheck className="w-4 h-4" />
-          <span>DRAP / cGMP Laboratory Certified</span>
+          <span>DRAP / cGMP Certified</span>
         </div>
       </div>
 

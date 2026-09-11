@@ -73,27 +73,27 @@ export function SensationFinder() {
   }).slice(0, 4);
 
   return (
-    <section className="rounded-3xl bg-dark-900/90 border border-white/10 p-6 sm:p-10 space-y-8 relative overflow-hidden">
+    <section className="rounded-3xl bg-gradient-to-b from-[#141210] via-[#100E0C] to-[#0A0908] border border-[#EAC996]/20 p-6 sm:p-10 space-y-8 relative overflow-hidden shadow-2xl">
       {/* Background glow */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-brand-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#D96B43]/08 rounded-full blur-3xl pointer-events-none" />
 
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div className="space-y-2">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 text-brand-400 text-xs font-bold border border-brand-500/20">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D4AF37]/10 text-[#EAC996] text-xs font-semibold border border-[#D4AF37]/25">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Interactive Sensation Matcher</span>
           </div>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-white">
-            Find Your Ideal Sensation
+          <h2 className="editorial-title text-2xl sm:text-4xl font-normal text-[#F5F2EB]">
+            Find Your Ideal <span className="font-serif italic text-[#EAC996]">Sensation</span>
           </h2>
-          <p className="text-xs sm:text-sm text-zinc-400 max-w-xl">
-            Inspired by international direct-to-consumer intimacy studios. Select the feeling you desire to reveal our certified recommendations.
+          <p className="text-xs sm:text-sm text-[#A8A29E] max-w-xl font-light">
+            Inspired by international intimate design studios. Select the feeling you desire to reveal our certified recommendations.
           </p>
         </div>
 
         <Link
           href="/products"
-          className="text-xs font-bold text-zinc-300 hover:text-brand-400 flex items-center gap-1.5 transition-colors group"
+          className="text-xs font-bold text-[#EAC996] hover:text-[#FFF0D6] flex items-center gap-1.5 transition-colors group"
         >
           <span>Explore All {SEED_PRODUCTS.length} Products</span>
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -111,32 +111,32 @@ export function SensationFinder() {
               onClick={() => setActiveSensation(tab.id)}
               className={`p-4 rounded-2xl border text-left transition-all duration-300 flex flex-col justify-between space-y-3 ${
                 isActive
-                  ? `bg-gradient-to-br ${tab.accent} shadow-lg scale-[1.02] border-white/20`
-                  : 'bg-dark-850/60 border-white/5 text-zinc-400 hover:border-white/15 hover:bg-dark-800'
+                  ? 'bg-[#1C1814] border-[#EAC996]/40 text-[#F5F2EB] shadow-[0_8px_25px_-5px_rgba(217,107,67,0.25)] scale-[1.02]'
+                  : 'bg-[#13110E] border-[#EAC996]/10 text-[#A8A29E] hover:border-[#EAC996]/25 hover:bg-[#181512]'
               }`}
             >
               <div className="flex items-center justify-between">
                 <div
                   className={`w-8 h-8 rounded-xl flex items-center justify-center ${
-                    isActive ? 'bg-white/10 text-white' : 'bg-dark-800 text-zinc-400'
+                    isActive ? 'bg-[#D96B43]/20 text-[#E88A6E] border border-[#D96B43]/30' : 'bg-[#181512] text-[#8A8275]'
                   }`}
                 >
                   <Icon className="w-4 h-4" />
                 </div>
                 {isActive && (
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="w-2 h-2 rounded-full bg-[#EAC996] shadow-[0_0_8px_rgba(234,201,150,0.8)]" />
                 )}
               </div>
 
               <div>
                 <span
-                  className={`text-xs font-bold block ${
-                    isActive ? 'text-white' : 'text-zinc-200'
+                  className={`text-xs font-semibold block ${
+                    isActive ? 'text-[#F5F2EB]' : 'text-[#D5CEBA]'
                   }`}
                 >
                   {tab.label}
                 </span>
-                <span className="text-[10px] text-zinc-400 block mt-0.5 line-clamp-1">
+                <span className="text-[10px] text-[#8A8275] block mt-0.5 line-clamp-1 font-light">
                   {tab.sublabel}
                 </span>
               </div>
